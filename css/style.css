@@ -101,6 +101,7 @@ a[href="#header"] {
    background-color: var(--mainColor);
    text-decoration: none;
    color: var(--secondaryColor);
+ z-index:999;
 }
 /* ------------------------- End Fixed Items   -------------------------*/
 /* ------------------------- Start Header   -------------------------*/
