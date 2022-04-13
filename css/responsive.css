@@ -1,0 +1,99 @@
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+xs = Extra small <576px
+Max container width None (auto)
+
+sm = Small ≥576px
+Max container width 540px
+
+md = Medium ≥768px
+Max container width 720px
+
+lg = Large ≥992px
+Max container width 960px
+
+xl = Extra large ≥1200px
+Max container width 1140px
+
+xxl = Extra large ≥1400px
+Max container width 1320px
+*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+   .container {
+      width: 540px;
+   }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+   .container {
+      width: 720px;
+   }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .container {
+      width: 960px;
+   }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+   .container {
+      width: 1140px;
+   }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+   .container {
+      width: 1320px;
+   }
+}
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+
+/* Set width to make card deck cards 100% width */
+@media (max-width: 576px) {
+   .container {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+   html {
+      font-size: 13px;
+   }
+   .contact .contact-content {
+      font-size: 9px;
+   }
+   .contact .contact-content .label {
+      letter-spacing: unset;
+   }
+}
+@media (max-width: 991px) {
+   .services-content .col .image {
+      display: none;
+   }
+   .services {
+      padding-bottom: unset;
+   }
+   .about .about-content {
+      flex-direction: column;
+      align-items: center;
+   }
+   .about .about-content .images {
+      margin-top: 30px;
+      margin-bottom: 50px;
+   }
+   .about .about-content .images::before,
+   .about .about-content .images::after {
+      all: unset;
+   }
+}

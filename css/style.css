@@ -1,0 +1,408 @@
+/** ----- Docomtation for size ------
+* * h1 - header - ==============> font -size 4rem
+* * h3 - header of items - ==============> font -size 4rem
+* * p - pragraph - ==============> 1.7 line height / font -size .85rem /
+ -------------------------*/
+
+/* ------------------------- Start Reset Style   -------------------------*/
+* {
+   padding: 0;
+   margin: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+/* ------------------------- End Reset Style   -------------------------*/
+/* ------------------------- Start Fonts   -------------------------*/
+@font-face {
+   font-family: "WorkSans";
+   src: url(../fonts/WorkSans-ExtraLight.ttf);
+   font-weight: 200;
+}
+@font-face {
+   font-family: "WorkSans";
+   src: url(../fonts/WorkSans-Regular.ttf);
+   font-weight: 400;
+}
+@font-face {
+   font-family: "WorkSans";
+   src: url(../fonts/WorkSans-SemiBold.ttf);
+   font-weight: 600;
+}
+@font-face {
+   font-family: "WorkSans";
+   src: url(../fonts/WorkSans-ExtraBold.ttf);
+   font-weight: 800;
+}
+/* ------------------------- End Fonts   -------------------------*/
+/* ------------------------- Start Global Rules   -------------------------*/
+.container {
+   width: 1100px;
+   margin-left: auto;
+   margin-right: auto;
+}
+body {
+   font-family: "WorkSans";
+}
+html {
+   -webkit-scroll-behavior: smooth;
+   -moz-scroll-behavior: smooth;
+   -ms-scroll-behavior: smooth;
+   -o-scroll-behavior: smooth;
+   scroll-behavior: smooth;
+}
+
+/* ------------------------- End Global Rules   -------------------------*/
+/* ------------------------- Start Components   -------------------------*/
+.special-hedding {
+   letter-spacing: -3px;
+   font-size: 5.5rem;
+   color: #eee;
+   text-align: center;
+}
+.special-hedding + p {
+   text-align: center;
+   color: #777;
+   margin-top: -27px;
+   overflow: auto;
+}
+.title-txt-prag {
+   margin-bottom: 20px;
+   font-size: 1.2rem;
+   font-weight: 800;
+}
+.txt-cont-prag {
+   color: var(--mainColorP);
+   font-size: 0.85rem;
+   line-height: 1.7;
+}
+/* ------------------------- End Components   -------------------------*/
+/* ------------------------- Start Variables   -------------------------*/
+:root {
+   --mainColor: #10cab7;
+   --mainColorP: #888;
+   --secondaryColor: #2c4755;
+   --colorBetwenSection: #f6f6f6;
+   --mainPaddingSection: 60px;
+}
+/* ------------------------- End Variables   -------------------------*/
+/* ------------------------- Start Fixed Items -------------------------*/
+a[href="#header"] {
+   position: fixed;
+   bottom: 12px;
+   right: 10px;
+   display: block;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--mainColor);
+   text-decoration: none;
+   color: var(--secondaryColor);
+}
+/* ------------------------- End Fixed Items   -------------------------*/
+/* ------------------------- Start Header   -------------------------*/
+.header {
+   padding: 20px;
+}
+.header .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.header .logo {
+   width: 60px;
+}
+.header .links {
+   position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+   width: 100%;
+}
+.header .links .icon {
+   width: 30px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-end;
+}
+.header .links .icon span {
+   height: 2px;
+   background-color: #333;
+   margin-bottom: 5px;
+}
+.header .links .icon span:first-child {
+   width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+   width: 60%;
+   transition: width 0.3s;
+}
+.header .links .icon span:last-child {
+   width: 100%;
+}
+.header .links ul {
+   min-width: 200px;
+   background-color: #f6f6f6;
+   box-shadow: 5px 5px 6px rgb(0 0 0 / 0.1);
+   list-style: none;
+   border: 1px solid #eee;
+   border-radius: 5px;
+   position: absolute;
+   z-index: 10;
+   top: calc(100% + 15px);
+   right: 0;
+   display: none;
+}
+.header .links ul::before {
+   content: "";
+   position: absolute;
+   top: -20px;
+   right: 5px;
+   border-width: 10px;
+   border-style: solid;
+   border-color: transparent transparent #dddd transparent;
+}
+.header .links:hover ul {
+   display: block;
+}
+.header .links ul li a {
+   display: block;
+   text-decoration: none;
+   color: #333;
+   padding: 15px;
+   transition: all 0.3s;
+}
+.header .links ul li a:hover {
+   padding-left: 35px;
+   color: #2196f3;
+}
+.header .links ul li:not(:last-child) {
+   border-bottom: 1px solid #ddd;
+}
+/* ------------------------- End Header   -------------------------*/
+/* ------------------------- Start Landing Section  -------------------------*/
+.landing {
+   height: calc(100vh - 64px);
+   background: url(../images/landing.jpg) no-repeat fixed center;
+   background-size: cover;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+.landing .intro-text {
+   max-width: 400px;
+   padding: 5px;
+}
+.landing h1 {
+   font-weight: 800;
+   font-size: 4rem;
+   color: var(--mainColor);
+   padding: 20px 0;
+}
+.landing p {
+   line-height: 1.7rem;
+}
+/* ------------------------- End Landing Section  -------------------------*/
+/* ------------------------- Start Features  -------------------------*/
+.features {
+   padding-top: var(--mainPaddingSection);
+   padding-bottom: var(--mainPaddingSection);
+   background-color: var(--colorBetwenSection);
+}
+.features .container {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 15px;
+}
+.features .feat-items {
+   padding: 50px 15px;
+   box-shadow: 0 0 7px rgba(0, 0, 0, 0.08);
+   text-align: center;
+}
+.features .feat-items:hover {
+   background-color: #fff;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.features .feat-items i {
+   color: var(--mainColor);
+}
+.features .feat-items h3 {
+   margin: 20px 0;
+   font-weight: 800;
+}
+/* ------------------------- End Features  -------------------------*/
+/* ------------------------- Start Services  -------------------------*/
+.services {
+   padding-top: var(--mainPaddingSection);
+   padding-bottom: var(--mainPaddingSection);
+}
+.services-content {
+   margin-top: var(--mainPaddingSection);
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   column-gap: 30px;
+}
+.services-content .col .srv {
+   display: flex;
+   margin-bottom: 30px;
+   min-height: 160px;
+   max-height: 170px;
+}
+.services-content .col .srv i {
+   color: var(--mainColor);
+   flex-basis: 60px;
+}
+.services-content .col .srv .text-srv {
+   flex: 1;
+}
+.services-content .col .image {
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   filter: drop-shadow(-10px 10px 5px rgb(0 0 0 / 0.1));
+   width: 260px;
+}
+.services-content .col .image img {
+   width: 100%;
+}
+.services-content .col .image::before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   top: -50px;
+   right: 20px;
+   width: 100px;
+   height: calc(100% + 100px);
+   background-color: var(--secondaryColor);
+}
+/* ------------------------- End Services  -------------------------*/
+/* ------------------------- Start portfolio   -------------------------*/
+.portofilo {
+   padding-top: var(--mainPaddingSection);
+   padding-bottom: var(--mainPaddingSection);
+   background-color: var(--colorBetwenSection);
+}
+.portofilo .portofilo-content {
+   margin-top: var(--mainPaddingSection);
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 30px;
+}
+.portofilo .portofilo-content .card {
+   box-shadow: 3px 5px 5px rgb(0 0 0 / 0.2);
+}
+.portofilo .portofilo-content .card .image {
+   overflow: hidden;
+   border-radius: 5px 5px 0 0;
+}
+.portofilo .portofilo-content img {
+   width: 100%;
+   filter: grayscale(100%);
+   transition: filter 0.3s, transform 0.3s, opacity 0.3s;
+}
+.portofilo .portofilo-content .card:hover img {
+   filter: grayscale(0);
+   transform: scale(1.1) rotate(5deg);
+   opacity: 0.6;
+}
+.portofilo .portofilo-content .card .portofilo-text {
+   padding: 25px;
+}
+/* ------------------------- End portfolio   -------------------------*/
+/* ------------------------- Start About   -------------------------*/
+.about {
+   margin-top: var(--mainPaddingSection);
+   margin-bottom: var(--mainPaddingSection);
+}
+.about .about-content {
+   margin-top: var(--mainPaddingSection);
+   display: flex;
+}
+.about .about-content .images {
+   position: relative;
+   max-width: 250px;
+   height: 375px;
+   filter: drop-shadow(10px 10px 5px rgb(0 0 0 / 0.1));
+}
+.about .about-content .images::before {
+   content: "";
+   position: absolute;
+   top: -40px;
+   left: -30px;
+   z-index: -1;
+   width: 100px;
+   height: calc(100% + 80px);
+   background-color: #ebeced;
+}
+.about .about-content .images::after {
+   content: "";
+   width: 120px;
+   height: calc(100% - 100px);
+   position: absolute;
+   border-left: 80px solid var(--mainColor);
+   border-bottom: 80px solid var(--mainColor);
+   top: -40px;
+   right: -150px;
+   z-index: -1;
+}
+.about .about-content img {
+   width: 100%;
+}
+.about .about-content .about-text {
+   flex-basis: calc(100% - 420px);
+   margin-left: auto;
+}
+.about .about-content .about-text hr {
+   border-color: var(--mainColor);
+   width: 50%;
+   margin: 45px 0;
+}
+.about .about-content .about-text p:first-of-type {
+   font-weight: 600;
+   line-height: 1.5;
+}
+/* ------------------------- End About   -------------------------*/
+/* ------------------------- Start Contact -------------------------*/
+.contact {
+   padding: var(--mainPaddingSection) 0;
+   background-color: var(--colorBetwenSection);
+   text-align: center;
+}
+.contact .contact-content {
+   margin-top: var(--mainPaddingSection);
+}
+.contact .contact-content .label {
+   color: var(--secondaryColor);
+   font-weight: 800;
+   font-size: 2.5em;
+   letter-spacing: -3px;
+}
+.contact .contact-content > a {
+   display: block;
+   text-decoration: none;
+   color: var(--mainColor);
+   font-weight: 800;
+   font-size: 2.5em;
+   margin: 20px 0;
+}
+.contact .contact-content .socila a {
+   color: var(--secondaryColor);
+   padding-left: 10px;
+}
+/* ------------------------- End Contact -------------------------*/
+/* ------------------------- start Footer -------------------------*/
+.footer {
+   background-color: var(--secondaryColor);
+   padding: 35px 0;
+   text-align: center;
+   color: #fff;
+   font-weight: 200;
+   letter-spacing: 2.5px;
+}
+.footer span {
+   color: var(--mainColor);
+   font-weight: 600;
+}
